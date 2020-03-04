@@ -12,6 +12,8 @@ This is a small php page (+style sheet) for navigating different pages on a serv
 6. On the first line, type the description. It should be only on the first line.
 7. On the second line, type the subjects it covered, separated by a comma (**,**) without a space before/after the comma. It should be only on the second line.
 
+*You only need **index.php** and **style.css** files. Other files, such as **ENOS_rep.png** etc. are unnecessary.*
+
 ![Example](https://raw.githubusercontent.com/recoskyler/ENOS/master/ENOS_rep.png)
 
 ### desc.txt Format
@@ -21,7 +23,7 @@ This is a small php page (+style sheet) for navigating different pages on a serv
 
 ```txt
 Some Project Name 123
-Javascript,NodeJS,php,MySQL,
+Javascript,Node JS,php,MySQL
 ```
 
 #### Already Color Coded Subjects/Keywords
