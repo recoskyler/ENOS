@@ -9,6 +9,8 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
+
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/recoskyler/ENOS/master/favicon.ico" type="image/x-icon">
 	</head>
 
 	<body>
@@ -48,17 +50,20 @@
 								foreach ($langList as $lang) {
 									if ($lang == "1" && $first) {
 										$langs .= "<span class='lang html'>HTML</span><span class='lang css'>CSS</span>";
+										$first = false;
 										continue;
 									} else if ($lang == "0" && $first) { 
+										$first = false;
 										continue;
 									} else if ($first) { 
 										$langs .= "<span class='lang html'>HTML</span><span class='lang css'>CSS</span>";
 									}
 
-									if (strtolower($lang) != "html" && strtolower($lang) != "css") {
-										$langs .= "<span class='lang " . strtolower($lang) . "'>" . $lang . "</span>";
-										$first = false;
+									if (strtolower($lang) != "html" && strtolower($lang) != "css" && trim(preg_replace('/\s+/', '', strtolower($lang))) != "") {
+										$langs .= "<span class='lang " . trim(preg_replace('/\s+/', '', strtolower($lang))) . "'>" . $lang . "</span>";
 									}
+
+									$first = false;
 								}
 							}
 						}

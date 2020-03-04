@@ -13,7 +13,10 @@ body {
 
 nav {
     display: block;
-    position: fixed;
+    position: absolute;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
     height: auto;
     background-color: #3d5af1;
@@ -56,7 +59,6 @@ nav span {
     margin: 200px auto;
     background-color: #091033;
     flex-direction: row;
-    flex-grow: 1;
     flex-shrink: 1;
     flex-wrap: wrap;
     align-items: stretch;
@@ -72,7 +74,7 @@ nav span {
     position: relative;
     width: auto;
     min-height: 130px;
-    max-width: 150%;
+    max-width: 450px;
     height:auto;
     padding: 20px;
     margin: 15px 5px;

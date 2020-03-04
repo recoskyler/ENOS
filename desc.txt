@@ -1,2 +1,2 @@
 This is the description of the project/page.
-html,css,These,are,the,topics,the,project,covered,split,by,a,comma,no,spaces,on,the,second,line,php
+html,css,These,are,The Topics,the,project,covered,split,by,a,comma,no,spaces,on,the,second,line,php
