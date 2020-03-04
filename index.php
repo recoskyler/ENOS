@@ -35,8 +35,7 @@
 					
 					if (file_exists($descFileDir)) {
 						$descFile = fopen($descFileDir, "r");
-						$desc = fread($descFile, filesize($descFileDir));
-						$desc = explode("\n", $desc);
+						$desc = explode("\n", fread($descFile, filesize($descFileDir)));
 						
 						if (count($desc) > 0) {
 							$langList = $desc;
@@ -73,13 +72,8 @@
 						fclose($descFile);
 					}
 
-					if (file_exists($phpFileDir)) {
-						$index = $link . $phpFileDir;
-					}
-
-					if (!file_exists($indexFileDir) && !file_exists($phpFileDir)) {
-						continue;
-					}
+					if (file_exists($phpFileDir)) $index = $link . $phpFileDir;
+					if (!file_exists($indexFileDir) && !file_exists($phpFileDir)) continue;
 					
 					$langs .= "</div>";
 
