@@ -46,6 +46,7 @@
 								$langList = $langList[1];
 								$langList = explode(",", $langList);
 								$first = true;
+								$skip = false;
 
 								foreach ($langList as $lang) {
 									if ($lang == "1" && $first) {
@@ -54,12 +55,13 @@
 										continue;
 									} else if ($lang == "0" && $first) { 
 										$first = false;
+										$skip = true;
 										continue;
 									} else if ($first) { 
 										$langs .= "<span class='lang html'>HTML</span><span class='lang css'>CSS</span>";
 									}
 
-									if (strtolower($lang) != "html" && strtolower($lang) != "css" && trim(preg_replace('/\s+/', '', strtolower($lang))) != "") {
+									if (($skip || (!$skip && strtolower($lang) != "html" && strtolower($lang) != "css")) && trim(preg_replace('/\s+/', '', strtolower($lang))) != "") {
 										$langs .= "<span class='lang " . trim(preg_replace('/\s+/', '', strtolower($lang))) . "'>" . $lang . "</span>";
 									}
 
