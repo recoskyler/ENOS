@@ -1,7 +1,5 @@
 # ENOS
 
-![Example](https://raw.githubusercontent.com/recoskyler/ENOS/master/ENOS_pre.png)
-
 ## Setup
 
 1. Copy *index.php* and *style.css* to your *public_html* folder in IT College ENOS server.
